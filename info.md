@@ -53,7 +53,10 @@ variable "node_pools" {
 
 메인에는 이렇게 기재됨
 nodepool 을 여러개 생성할 수 있으므로 for_each 사용
-dynamic 사용 (설명 추가)
+dynamic 사용 (autoscale)
+
+autoscale -> null 이 아니라면 (autoscale 값이 존재한다면) 해당 argument를 만듦
+설정이 있는지, 없는지만 결정함
 
 ```
 resource "ncloud_nks_node_pool" "node_pool" {
